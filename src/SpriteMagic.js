@@ -139,7 +139,7 @@ export default class SpriteMagic {
     clearCache() {
         const pattern = this.spriteSassPath().replace(/[0-9a-f]+\.scss$/, '*');
         this.debug(`delete: ${pattern}`);
-        return del(pattern);
+        return del(pattern, {force: true});
     }
 
     runSpritesmith() {
